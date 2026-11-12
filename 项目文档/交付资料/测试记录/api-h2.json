@@ -1,0 +1,175 @@
+{
+  "baseUrl": "http://127.0.0.1:9080/api",
+  "checks": [
+    {
+      "name": "anonymous protected read is 401",
+      "passed": true
+    },
+    {
+      "name": "registration validates username and password",
+      "passed": true
+    },
+    {
+      "name": "duplicate registration is 409",
+      "passed": true
+    },
+    {
+      "name": "fresh account has no families",
+      "passed": true
+    },
+    {
+      "name": "missing CSRF is rejected",
+      "passed": true
+    },
+    {
+      "name": "36 fictional people across five generations",
+      "passed": true
+    },
+    {
+      "name": "family account association",
+      "passed": true
+    },
+    {
+      "name": "member can read all family people",
+      "passed": true
+    },
+    {
+      "name": "member write and cross-family reads are forbidden",
+      "passed": true
+    },
+    {
+      "name": "server generation filter and pagination",
+      "passed": true
+    },
+    {
+      "name": "birth year filter",
+      "passed": true
+    },
+    {
+      "name": "pagination bounds",
+      "passed": true
+    },
+    {
+      "name": "date ordering and strict calendar validation",
+      "passed": true
+    },
+    {
+      "name": "self relations, duplicates and biological/adoptive cycles rejected",
+      "passed": true
+    },
+    {
+      "name": "reversed spouse duplicate rejected",
+      "passed": true
+    },
+    {
+      "name": "cross-family relation rejected",
+      "passed": true
+    },
+    {
+      "name": "multi-level descendants are unique and exclude root",
+      "passed": true
+    },
+    {
+      "name": "multi-level ancestors",
+      "passed": true
+    },
+    {
+      "name": "private people and their edge names are filtered",
+      "passed": true
+    },
+    {
+      "name": "private event attachments and statistics follow visible scope",
+      "passed": true
+    },
+    {
+      "name": "last active administrator protected",
+      "passed": true
+    },
+    {
+      "name": "missing approval decision cannot silently reject proposal",
+      "passed": true
+    },
+    {
+      "name": "member proposal and administrator approval",
+      "passed": true
+    },
+    {
+      "name": "review is single-use",
+      "passed": true
+    },
+    {
+      "name": "stale proposal conflict and rejection",
+      "passed": true
+    },
+    {
+      "name": "authenticated image upload and read",
+      "passed": true
+    },
+    {
+      "name": "executable or invalid upload rejected",
+      "passed": true
+    },
+    {
+      "name": "private media access",
+      "passed": true
+    },
+    {
+      "name": "avatar references family image",
+      "passed": true
+    },
+    {
+      "name": "external avatar address rejected",
+      "passed": true
+    },
+    {
+      "name": "complete JSON export includes binary media",
+      "passed": true
+    },
+    {
+      "name": "CSV export is UTF-8 with BOM",
+      "passed": true
+    },
+    {
+      "name": "event deletion clears media reference",
+      "passed": true
+    },
+    {
+      "name": "deleting avatar image clears person reference",
+      "passed": true
+    },
+    {
+      "name": "failed family delete preserves memberships",
+      "passed": true
+    },
+    {
+      "name": "audit records successful writes",
+      "passed": true
+    },
+    {
+      "name": "public family summary exposes only authorized summary fields",
+      "passed": true
+    },
+    {
+      "name": "public summary can be withdrawn",
+      "passed": true
+    },
+    {
+      "name": "concurrent opposite parent links cannot create a cycle",
+      "passed": true
+    },
+    {
+      "name": "system administrator can disable account and block existing session",
+      "passed": true
+    },
+    {
+      "name": "family admin cannot administer system users",
+      "passed": true
+    },
+    {
+      "name": "logout invalidates session",
+      "passed": true
+    }
+  ],
+  "passed": 42,
+  "failed": 0
+}

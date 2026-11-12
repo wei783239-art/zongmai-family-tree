@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "name": "production build includes the sidebar brand image",
+      "passed": true
+    },
+    {
+      "name": "administrator login and live family overview",
+      "passed": true
+    },
+    {
+      "name": "graph loads all 36 people and confirmed relationships",
+      "passed": true
+    },
+    {
+      "name": "search, person detail drawer, and relatives",
+      "passed": true
+    },
+    {
+      "name": "clicking graph node opens its corresponding record",
+      "passed": true
+    },
+    {
+      "name": "collapse and expand descendant branches",
+      "passed": true
+    },
+    {
+      "name": "whole graph PNG export",
+      "passed": true
+    },
+    {
+      "name": "member page lineage dialog",
+      "passed": true
+    },
+    {
+      "name": "event timeline displays real events",
+      "passed": true
+    },
+    {
+      "name": "settings and CSV download",
+      "passed": true
+    },
+    {
+      "name": "system administrator sees system user controls",
+      "passed": true
+    },
+    {
+      "name": "create family through normal UI",
+      "passed": true
+    },
+    {
+      "name": "create three member records through normal UI",
+      "passed": true
+    },
+    {
+      "name": "create parent links through normal UI",
+      "passed": true
+    },
+    {
+      "name": "create event through normal UI",
+      "passed": true
+    },
+    {
+      "name": "upload and display image through normal UI",
+      "passed": true
+    },
+    {
+      "name": "person avatar is selected from album and loaded by graph card",
+      "passed": true
+    },
+    {
+      "name": "member read-only controls and change proposal",
+      "passed": true
+    },
+    {
+      "name": "administrator approves member change through normal UI",
+      "passed": true
+    },
+    {
+      "name": "mobile layout keeps usable graph area",
+      "passed": true
+    },
+    {
+      "name": "no browser script errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": 21,
+  "failed": 0
+}

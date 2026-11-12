@@ -1,0 +1,48 @@
+CREATE TABLE IF NOT EXISTS family_event (
+ id BIGINT AUTO_INCREMENT PRIMARY KEY,
+ family_id BIGINT NOT NULL,
+ title VARCHAR(160) NOT NULL,
+ event_date DATE,
+ location VARCHAR(160),
+ content TEXT,
+ person_id BIGINT,
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ FOREIGN KEY (family_id) REFERENCES family(id)
+);
+CREATE TABLE IF NOT EXISTS family_media (
+ id BIGINT AUTO_INCREMENT PRIMARY KEY,
+ family_id BIGINT NOT NULL,
+ title VARCHAR(160) NOT NULL,
+ person_id BIGINT,
+ event_id BIGINT,
+ file_name VARCHAR(255) NOT NULL,
+ content_type VARCHAR(80) NOT NULL,
+ visibility VARCHAR(16) NOT NULL DEFAULT 'FAMILY',
+ file_data LONGBLOB NOT NULL,
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ FOREIGN KEY (family_id) REFERENCES family(id)
+);
+CREATE TABLE IF NOT EXISTS change_request (
+ id BIGINT AUTO_INCREMENT PRIMARY KEY,
+ family_id BIGINT NOT NULL,
+ applicant_id BIGINT NOT NULL,
+ kind VARCHAR(32) NOT NULL,
+ target_id BIGINT,
+ payload_json TEXT NOT NULL,
+ original_json TEXT,
+ status VARCHAR(16) NOT NULL DEFAULT 'PENDING',
+ reviewer_id BIGINT,
+ review_note VARCHAR(500),
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ reviewed_at TIMESTAMP,
+ FOREIGN KEY (family_id) REFERENCES family(id)
+);
+CREATE TABLE IF NOT EXISTS audit_log (
+ id BIGINT AUTO_INCREMENT PRIMARY KEY,
+ family_id BIGINT NOT NULL,
+ operator_id BIGINT NOT NULL,
+ action VARCHAR(16) NOT NULL,
+ target VARCHAR(500) NOT NULL,
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ FOREIGN KEY (family_id) REFERENCES family(id)
+);
